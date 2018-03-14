@@ -26,10 +26,7 @@ Si es menor instala una versión nueva ya sea con **Help > Check for Updates** o
 
 Para que estes segur@ de tener todos los paquetes que vamos a utilizar lo mejor es que los instales de antemano. Con las siguientes instrucciones los puedes instalar todos:
 
-    install.packages(c("devtools", "dplyr", "readxl", "lubridate", 
-                "stringr", "ggplot2", "ggridges", "purrr",
-                "readr", "tibble", "tidyr"),  dependencies = TRUE)
-                
-    install.packages(c("testit", "testthat"),  dependencies = TRUE)
-    
-    devtools::install_github("ropenscilabs/testrmd")
+    install.packages(c("devtools", "dplyr", "readxl", "readr", "lubridate", 
+                "stringr", "purrr", "ggplot2", "DBI", "RSQLite", "tidyr"),
+                 dependencies = TRUE)
+
