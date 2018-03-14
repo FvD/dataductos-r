@@ -34,3 +34,4 @@ vignettes/*.pdf
 
 # Datos
 data/
+.Rproj.user

@@ -1,0 +1,41 @@
+---
+title: "Dataductos en R con dplyr"
+author: "Data Latam"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: cosmo
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(DBI)
+library(RSQLite)
+```
+
+
+## Dependencias del Curso
+
+### dplyr
+
+El paquete [dplyr](cran.r-project.org/package=dplyr)
+
+Hay tres paquetes entres las dependencias de dplyr que son muy relevantes en el uso diario.
+
+Primero esta [magrittr](cran.r-project.org/package=magrittr)
+
+Y finalmente [tibble](cran.r-project.org/package=tibble) 
+
+Despues esta [rlang](cran.r-project.org/package=rlang)
+
+
+### DBI
+El paquete [DBI](cran.r-project.org/package=DBI)
+
+
+### RSQLite
+El paquete [RSQLite](cran.r-project.org/package=RSQLite)
