@@ -5,7 +5,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-    toc_depth: 3
+    toc_depth: 4
     theme: cosmo
     highlight: tango
 ---
@@ -22,20 +22,46 @@ library(RSQLite)
 
 ### dplyr
 
-El paquete [dplyr](cran.r-project.org/package=dplyr)
+No será sorpresa que para un curso sobre `dplyr` necesitamos poder correr:
+
+```{r}
+library(dplyr)
+```
+
+para verificar que esta instalado. Si no, sigue los [pasos para instalar paquetes R](http://sancarlos-rug.github.io/introduccion.html) para instalarlo.
+
+La documentación oficial del paquete [dplyr en CRAN](cran.r-project.org/package=dplyr) incluye varios *vignettes* que contienen muy buenas introducciones sobre el uso de dplyr:
+
+ - [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+ - [Window functions](https://cran.r-project.org/web/packages/dplyr/vignettes/window-functions.html)
+ - [Two-table verbs](https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html)
+ - [dplyr compatibility](https://cran.r-project.org/web/packages/dplyr/vignettes/compatibility.html)
+ - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html)
 
 Hay tres paquetes entres las dependencias de dplyr que son muy relevantes en el uso diario.
 
-Primero esta [magrittr](cran.r-project.org/package=magrittr)
-
-Y finalmente [tibble](cran.r-project.org/package=tibble) 
-
-Despues esta [rlang](cran.r-project.org/package=rlang)
+Primero esta [magrittr](cran.r-project.org/package=magrittr) que permite el uso del conducto (en Inglés: *pipe*) que vemos con el símbolo `%>%` en el código R. Ademas está [tibble](cran.r-project.org/package=tibble) que da una forma alternativa para guardar los cuadros a `data.frame`, con características propias. Ademas está [rlang](cran.r-project.org/package=rlang) que permite hacer cosas como usar variables para designar nombres de columnas en dplyr. Los mencionamos aquí para facilitar el acceso a la documentación de cada uno.
 
 
 ### DBI
-El paquete [DBI](cran.r-project.org/package=DBI)
+El paquete [DBI](cran.r-project.org/package=DBI) permite hacer conexiones a bases de datos. Nosotros en los ejemplos vamos a usar SQLite como ejemplo de una base de datos a la cual se puede conectar. Verifica que puedes correr:
 
+```{r}
+library(DBI)
+```
 
 ### RSQLite
-El paquete [RSQLite](cran.r-project.org/package=RSQLite)
+Para hacer ejercicio conectando a una base de datos vamos a usar [SQLite](https://www.sqlite.org/about.html). Necesitamos el paquete [RSQLite](cran.r-project.org/package=RSQLite) para poder hacer la conexión con dplyr. Verifica que puedes correr:
+
+```{r}
+library(RSQLite)
+```
+
+La ventaja de usar SQLite para ejemplos es que el paquete en R contiene SQLite, y por lo tanto no hace falta instalar mas. Gracias al diseño de dplyr y DBI, los ejemplos van a quedar prácticamente igual. Otras interfaces (Ingles: *backends*) a bases de datos en uso comunes son por ejemplo:
+
+ - [RSQLServer](https://github.com/imanuelcostigan/RSQLServer): Interfaz a Microsoft SQL Server
+ - [bigrquery](https://github.com/r-dbi/bigrquery) : Interfaz a Google BigQuery
+ - [RMySQL](https://github.com/rstats-db/RMySQL#readme) : Interfaz a MySQL and MariaDB
+ - [RPostgreSQL](https://cran.r-project.org/package=RPostgreSQL) : Interfaz a Postgres y Amazon Redshift.
+
+
