@@ -31,7 +31,7 @@ eval(x)
 eval(x, cantones)
 
 
-# asi que una funcion como transmute evaluan en un data mask
+# asi que una función como transmute evaluan en un data mask
 # pero no podemos pasarlo directamente
 transmute(cantones, x)
 
@@ -50,7 +50,7 @@ qq_show(
 )
 
 
-#Crear simbolos
+# Crear simbolos
 columnas <- c("poblacion", "area")
 
 columna <- columnas[[1]]
@@ -86,3 +86,19 @@ calcula_promedio <- function(datos, columna) {
 calcula_promedio(cantones, "poblacion")
 calcula_promedio(cantones, "area")
 
+# Otros ejemplos
+
+# select
+cantones %>%
+  select(columnas)
+
+# triple Bang: "splice unqoute operator"
+qq_show(
+   cantones %>%
+     select(columnas)
+)
+
+qq_show(
+  cantones %>%
+    select(!!!columnas)
+)
