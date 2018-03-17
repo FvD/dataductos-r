@@ -1,10 +1,16 @@
-
-
+# Ejemplos con Base R
 # Crear subconjuntos
+mtcars[3:43, ]
+
 mtcars[which(mtcars$am == 0), ]
 mtcars[which(mtcars$am == 1), ]
 
+subset(mtcars, am == 0)
+subset(mtcars, am == 1)
 
+
+mtcars[, 3:6]
+mtcars[c("disp", "hp", "drat", "wt")]
 
 # recodificar una variable de dos niveles
 # Estos ejemplos vienen de una charla de Mine Cetinkaya Rundel

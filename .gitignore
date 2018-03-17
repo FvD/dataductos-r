@@ -33,6 +33,4 @@ vignettes/*.pdf
 *.knit.md
 *.html
 
-# Datos
-data/
 .Rproj.user
