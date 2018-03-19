@@ -44,11 +44,12 @@ adm2_cantones_db <- tbl(divisiones, "adm2_cantones")
 adm2_gadm_db <- tbl(divisiones, "adm2_gadm")
 adm3_distritos_db <- tbl(divisiones, "adm3_distritos")
 
+
 adm2_cantones_db %>%
-  left_join(adm2_gadm_db, by = c("Código" = "Código"))
+  left_join(adm2_gadm_db, by = c("Codigo" = "Codigo"))
 
 cuadro_unido <- adm2_cantones_db %>%
-  left_join(adm2_gadm_db, by = c("Código" = "Código"))
+  left_join(adm2_gadm_db, by = c("Codigo" = "Codigo"))
 
 explain(cuadro_unido)
 
@@ -58,10 +59,10 @@ dim(collect(cuadro_unido))
 
 # Filtrar sobre una tabla
 cuadro_unido %>%
-  filter(Código > 200)
+  filter(Codigo > 200)
 
 # Cuando usar collect?
-cuadro_unido$Código
+cuadro_unido$Codigo
 cuadro_unido$Nombre
 
 collect(cuadro_unido)$Nombre

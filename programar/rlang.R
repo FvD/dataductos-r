@@ -6,8 +6,8 @@ divisiones <- dbConnect(RSQLite::SQLite(), "data/divisiones/divisiones.sqlite")
 # Aplanamos el cuadro adm2_cantones a un tibble
 cantones <- tbl(divisiones, "adm2_cantones") %>%
   collect() %>%
-  rename(codigo = Código) %>%
-  rename(area = `Área (km2)`) %>%
+  rename(codigo = Codigo) %>%
+  rename(area = `Area (km2)`) %>%
   rename(poblacion = `Pop. (2008)`)
 
 # esto funciona

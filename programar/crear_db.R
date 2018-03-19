@@ -8,7 +8,9 @@ adm1_provincias <- read_csv("data/divisiones/csv/adm1-provincias.csv",
                      col_types = list(
                        Código = col_integer(),
                        Nombre = col_character()
-                     ))
+                     )) %>%
+  rename(Codigo = Código)
+
 
 adm2_cantones <- read_csv("data/divisiones/csv/adm2-cantones.csv",
                      col_types = list(
@@ -17,20 +19,27 @@ adm2_cantones <- read_csv("data/divisiones/csv/adm2-cantones.csv",
                         Nombre = col_character(),
                         `Área (km2)` = col_double(),
                         `Pop. (2008)` = col_integer()
-                     ))
+                     )) %>%
+  rename(Codigo = Código) %>%
+  rename(`Area (km2)` = `Área (km2)`)
+
 
 adm2_gadm <- read_csv("data/divisiones/csv/adm2-gadm.csv",
                      col_types = list(
                         ID_2 = col_integer(),
                         Código = col_integer()
-                     ))
+                     )) %>%
+  rename(Codigo = Código)
+
 
 adm3_distritos <- read_csv("data/divisiones/csv/adm3-distritos.csv",
                      col_types = list(
                         Código = col_integer(),
                         Cantón = col_integer(),
                         Nombre = col_character()
-                     ))
+                     )) %>%
+  rename(Codigo = Código)
+
 
 divisiones <- dbConnect(RSQLite::SQLite(), "data/divisiones/divisiones.sqlite")
 
