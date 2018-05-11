@@ -32,3 +32,5 @@ Para que estes segur@ de tener todos los paquetes que vamos a utilizar lo mejor 
                 "stringr", "purrr", "ggplot2", "DBI", "RSQLite", "tidyr"),
                  dependencies = TRUE)
 
+## Organiza
+Este evento lo organiza [Data Latam](http://wwww.datalatam.com) en cooperación con [ixpantia](https://www.ixpantia.com). Data Latam es una comunidad Latinoamericana de profesionales y académicos aplicando ciencia de datos en su día a día en la industria de datos en Latino América. En sus eventos, cursos y programas de extensión exploramos tecnologías, aprendemos sobre ciencia de datos, hablamos de tendencias y eventos relevantes de la industria, y compartimos novedades del sector.
