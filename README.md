@@ -1,5 +1,7 @@
 # Dataductos en R con dplyr
 
+Estos son los ejemplos del [Curso Profesional: Dataductos en R con dplyr](https://www.meetup.com/DataLatam/events/243103581/).
+
 Antes de comenzar con los ejemplos por favor verifica lo siguiente:
 
 1. Que tienes una versión de R actualizada. Vamos a trabajar con la version 3.4.3. 
